@@ -1,0 +1,127 @@
+/* Importing google font name - Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@300&family=Poppins:ital,wght@1,300&family=Quicksand&family=Raleway:wght@500&display=swap');
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    width: 35vw;
+    height: 95vh;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 1.2rem;
+    /* top, left&right, bottom */
+}
+
+.form {
+    padding: 4rem 3rem;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    color: #50394c;
+    margin-bottom: 0.21em;
+    font-size: 1.12rem;
+
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    height: 6vh;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    border: 2px solid #edf1ff;
+    border-radius: 4px;
+
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #363945;
+}
+
+.form-control input::placeholder {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control.success i.fa-circle-check {
+    visibility: visible;
+    color: var(--success-color);
+}
+
+.form-control.error i.fa-circle-exclamation {
+    visibility: visible;
+    color: var(--error-color);
+}
+
+.form-control i {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    color: var(--error-color);
+    visibility: visible;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 100%;
+    height: 5vh;
+    background-color: #363945;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1.05rem;
+    cursor: pointer;
+
+}
