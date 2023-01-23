@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Castoro', serif;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(242, 232, 232);
+  padding: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+body{
+  background-color: #d4e4f7;
+}
+.nav-links li{
+  list-style: none;
+  display: inline-block;
+}
+li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 1.2rem;
+}
+li a:hover{
+  text-decoration: underline;
+  color: rgb(198, 83, 83);
+}
+.navbar h4{
+  color:  rgb(240, 100, 100);
+  font-size: 1.3rem;
+}
+main{
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 3rem);
+}
+.container{
+  text-align: center;
+}
+.container h2{
+  background-color: rgb(21, 15, 15);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.btn{
+  display: block;
+  padding: 0.3vw 1.3vw;
+  text-align: center;
+  margin: 0 auto;
+  border: 2px solid rgb(231, 82, 82);
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  font-size: 1rem;
+  transition: all;
+  transition-duration: 0.7s;
+  transition-property: ease-in-out;
+}
+.btn:hover{
+  background-color: black;
+  color: white;
+
+}
+.color{
+  color: rgb(255, 67, 67);
+}
