@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+  <div class="container">
+    <h2>Counter</h2>
+    <div id="screen"></div>
+    <button class="btn" id="decrement">decrease</button>
+    <button class="btn" id="reset">reset</button>
+    <button class="btn" id="increment">increase</button>
+  </div>
+</main>
+  <script>
+    let counter = 0
+    let incrementBtn = document.getElementById('increment')
+    let decrementBtn = document.getElementById('decrement')
+    let resetBtn = document.getElementById('reset')
+    let screen = document.querySelector('#screen')
+
+    // initial value of counter, show it to screen
+    screen.textContent = counter
+
+// on clicking increase value
+    incrementBtn.addEventListener('click', ()=>{
+      counter++;
+      displayCounter(counter)
+    })
+    decrementBtn.addEventListener('click', ()=>{
+      counter--;
+      displayCounter(counter)
+    })
+
+    resetBtn.addEventListener('click', ()=>{
+      counter = 0;
+      displayCounter(counter)
+    })
+
+  // utility function for counter displaying
+    function displayCounter(counter){
+    screen.textContent = counter
+    if(counter > 0) screen.style.color = '#004225'
+    else if(counter == 0) screen.style.color = 'black'
+    else screen.style.color = '#E3242B'
+    }
+  </script>
+</body>
+</html>

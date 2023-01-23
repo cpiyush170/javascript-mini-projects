@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Unbounded', cursive;
+}
+
+main{
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 3rem);
+}
+
+.container{
+  text-align: center;
+}
+.container h2{
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+#screen{
+  margin-top: 1rem;
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+.btn{
+  margin-top: 2rem;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-right: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.btn:hover{
+  background-color: slateblue;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .container h2{
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+  .btn{
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
