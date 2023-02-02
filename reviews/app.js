@@ -37,39 +37,33 @@ let name = document.querySelector('#name')
 let profession = document.querySelector('#profession')
 let description = document.querySelector('#desc')
 
-let arrows = document.querySelectorAll('button')
+let left = document.querySelector('.left')
+let right = document.querySelector('.right')
+let randomBtn = document.querySelector('.random-btn')
+let index = 0;
 
-let index = 0
+// when dom loads, show first array object
+window.addEventListener('DOMContentLoaded', function () {
+  udpateDOM(index)
+})
 
-arrows.forEach(function (arrow) {
-  arrow.addEventListener('click', () => {
-    if (arrow.classList.contains('right'))
-    {
-      if (index < reviews.length - 1) {
-        index++;
-        udpateDOM(index)
-      }
-      else {
-        index = 0
-        udpateDOM(index)
-      }
-    }
-    else
-    {
-      if (index > 0) {
-        index--;
-        udpateDOM(index)
-      }
-      else {
-        index = reviews.length - 1
-        udpateDOM(index)
-      }
-    }
-  })
+left.addEventListener('click', () => {
+  if (index > 0) index--;
+  else index = reviews.length - 1;
+  udpateDOM(index)
+})
+right.addEventListener('click', () => {
+  if (index < reviews.length - 1) index++;
+  else index = 0;
+  udpateDOM(index)
+})
+
+randomBtn.addEventListener('click', () => {
+  let randomIndex = Math.floor(Math.random() * reviews.length)
+  udpateDOM(randomIndex)
 })
 
 // updates the dom elements with new content
-
 function udpateDOM(index) {
         img.src = reviews[index].img
         name.textContent = reviews[index].name
