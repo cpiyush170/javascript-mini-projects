@@ -49,6 +49,7 @@ giveaway.textContent = `giveaway ends on ${day}, ${date} ${month} ${year} ${hour
 const futureTime = futureDate.getTime()
 
 let id = setInterval(getRemainingTime, 1000)
+getRemainingTime()
 function getRemainingTime() {
 
   let today = new Date().getTime()
