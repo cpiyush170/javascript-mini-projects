@@ -26,10 +26,12 @@ const giveaway = document.querySelector('.giveaway')
 const deadline = document.querySelector('.deadline')
 const items = document.querySelectorAll('.deadline-format h4')
 
-let currDate = new Date()
-let numOfDaysToAdd = 4;
-let res = currDate.setDate(currDate.getDate() + numOfDaysToAdd)
-let futureDate = new Date(res)
+let tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+// months are ZERO index based;
+const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 let day = weekdays[futureDate.getDay()];
 let month = months[futureDate.getMonth()];
 let date = futureDate.getDate()
@@ -46,10 +48,9 @@ function timePeriod(hours) {
 let period = timePeriod(hours)
 
 giveaway.textContent = `giveaway ends on ${day}, ${date} ${month} ${year} ${hours}:${minutes}${period}`;
+
 const futureTime = futureDate.getTime()
 
-let id = setInterval(getRemainingTime, 1000)
-getRemainingTime()
 function getRemainingTime() {
 
   let today = new Date().getTime()
@@ -84,3 +85,6 @@ function getRemainingTime() {
   }
     
 }
+let id = setInterval(getRemainingTime, 1000)
+
+getRemainingTime()
