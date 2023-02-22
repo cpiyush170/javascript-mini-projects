@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Viewer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <ul class="navbar">
+        <li>
+          <h1>Dog Viewer</h1>
+        </li>
+        <li>
+          <select name="breeds" id="breeds">
+            <option value=""></option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <img
+        src="https://placedog.net/500"
+        alt="doggo"
+        class="dog-img show"
+      />
+      <!---spinner-->
+      <img
+        src="https://images.emojiterra.com/twitter/v14.0/512px/1f436.png"
+        class="spinner"
+      />
+    </div>
+
+    <script src="./dog.js"></script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    background-color: #991111;
+    padding: 2rem 1rem;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+}
+
+select {
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: .5rem;
+}
+
+
+.dog-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: none;
+}
+
+.spinner {
+    max-width: 10vw;
+    max-height: 10vh;
+    animation: rotate 2s ease-in-out infinite;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
